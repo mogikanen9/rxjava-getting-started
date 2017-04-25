@@ -1,8 +1,10 @@
-package com.mogikanensoftware.rx.simple_creation;
+package com.mogikanensoftware.rx.creation;
+
+import java.util.Arrays;
 
 import rx.Observable;
 
-public class App 
+public class SimpleCreationApp 
 {
     public static void main( String[] args )
     {
@@ -12,5 +14,12 @@ public class App
         observable.subscribe((i)->{
         	System.out.println(i);
         });
+        
+        System.out.println("Observable creation from a list of integers");
+        observable = Observable.from(Arrays.asList(22,34,56,77));
+        observable.subscribe((i)->{
+        	System.out.println(i);
+        });
+        System.exit(0);
     }
 }

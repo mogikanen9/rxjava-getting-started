@@ -10,3 +10,17 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+simple-creation/.classpath
+
+simple-creation/.project
+
+*.prefs
+
+simple-creation/.settings/org.eclipse.wst.common.project.facet.core.xml
+
+simple-creation/target/classes/META-INF/MANIFEST.MF
+
+simple-creation/target/classes/META-INF/maven/com.mogikanensoftware.rx/simple-creation/pom.properties
+
+simple-creation/target/classes/META-INF/maven/com.mogikanensoftware.rx/simple-creation/pom.xml

@@ -24,3 +24,15 @@ simple-creation/target/classes/META-INF/MANIFEST.MF
 simple-creation/target/classes/META-INF/maven/com.mogikanensoftware.rx/simple-creation/pom.properties
 
 simple-creation/target/classes/META-INF/maven/com.mogikanensoftware.rx/simple-creation/pom.xml
+
+simple-composition/.classpath
+
+simple-composition/.project
+
+.project
+
+*.MF
+
+simple-composition/target/classes/META-INF/maven/com.mogikanensoftware.rx/simple-composition/pom.properties
+
+simple-composition/target/classes/META-INF/maven/com.mogikanensoftware.rx/simple-composition/pom.xml

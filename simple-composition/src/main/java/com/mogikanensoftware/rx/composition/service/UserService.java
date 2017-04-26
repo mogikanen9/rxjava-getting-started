@@ -21,6 +21,14 @@ public class UserService {
 	}
 
 	public List<User> fetchAllUsers() {
+		System.out.println("Emulate data loading...");
+		try {
+			System.out.println(Thread.currentThread().getName());
+			Thread.currentThread().sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return Collections.unmodifiableList(allUsers);
 	}
 }

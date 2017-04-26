@@ -17,7 +17,13 @@ public class CompositionExampleApp {
 
 		Observable.from(userService.fetchAllUsers()).filter((user) -> {
 			return user.getRole().equals(SecurityRole.PowerUser);
-		}).subscribe((user) -> System.out.println(user));
+		}).map((user) -> {
+			return user.getEmail();
+		}).subscribe((email) -> System.out.println(email), (t) -> {
+			System.out.println("Smth. went wrong->" + t.getMessage());
+		}, () -> {
+			System.out.println("Done processing.");
+		});
 
 		System.out.println("Done.");
 		System.exit(0);

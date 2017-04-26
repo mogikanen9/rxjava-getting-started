@@ -19,7 +19,15 @@ public class CompositionExampleApp {
 			return user.getRole().equals(SecurityRole.PowerUser);
 		}).map((user) -> {
 			return user.getEmail();
-		}).subscribe((email) -> System.out.println(email), (t) -> {
+		}).subscribe((email) -> {
+			System.out.println(email);
+			// emulate heavy processing
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}, (t) -> {
 			System.out.println("Smth. went wrong->" + t.getMessage());
 		}, () -> {
 			System.out.println("Done processing.");

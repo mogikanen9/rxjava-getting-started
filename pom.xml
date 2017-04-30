@@ -12,6 +12,7 @@
 <modules>
 	<module>simple-creation</module>
 	<module>simple-composition</module>
+	<module>simple-filtering</module>
 </modules>
 
 	<properties>

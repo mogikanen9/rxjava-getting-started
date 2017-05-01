@@ -27,7 +27,13 @@ public class PositionalExample {
 		Observable.empty().firstOrDefault(26L).subscribe((i) -> {
 			System.out.print(String.format(" %d", i));
 		});
+		
+		System.out.println("\nLast or default from empty");
+		Observable.empty().lastOrDefault(3000L).subscribe((i) -> {
+			System.out.print(String.format(" %d", i));
+		});
 
+		System.exit(0);
 	}
 
 }

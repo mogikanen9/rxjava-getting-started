@@ -6,20 +6,20 @@ import java.util.List;
 
 public class FibonacciGenerator {
 
-	List<Integer> generateSequence(short n) {
+	public static List<Integer> generateSequence(int j) {
 		List<Integer> result = new ArrayList<>();
-		if (n < 0) {
-			throw new RuntimeException(String.format("Invalid parameter n=%d", n));
-		} else if (n == 0) {
+		if (j < 0) {
+			throw new RuntimeException(String.format("Invalid parameter n=%d", j));
+		} else if (j == 0) {
 			System.out.println("Empty sequence");
-		} else if (n == 1) {
+		} else if (j == 1) {
 			result.add(0);
-		} else if (n == 2) {
+		} else if (j == 2) {
 			result.addAll(Arrays.asList(0, 1));
 		} else {
 			result.addAll(Arrays.asList(0, 1));
-			for (int i = 2; i < n; i++) {
-				int val = (i - 1) + (i - 2);
+			for (int i = 2; i < j; i++) {
+				int val = result.get(i - 1) + result.get(i - 2);
 				result.add(val);
 			}
 		}

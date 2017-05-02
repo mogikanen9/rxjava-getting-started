@@ -11,7 +11,13 @@ public class PositionalAndPredicateExample {
 		Observable.from(FibonacciGenerator.generateSequence(20)).first((i) -> {
 			return i % 3 == 0;
 		}).subscribe((i) -> {
-			System.out.print(String.format(" %d", i));
+			System.out.println(String.format(" %d", i));
+		});
+		
+		Observable.from(FibonacciGenerator.generateSequence(20)).last((i) -> {
+			return i % 3 == 0;
+		}).subscribe((i) -> {
+			System.out.println(String.format(" %d", i));
 		});
 	}
 }

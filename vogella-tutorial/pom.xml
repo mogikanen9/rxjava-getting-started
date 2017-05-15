@@ -11,6 +11,7 @@
 
 <modules>
 	<module>todo-client</module>
+	<module>todo-server</module>
 </modules>
 
 	<properties>

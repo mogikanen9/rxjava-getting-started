@@ -3,6 +3,7 @@ package com.mogikanensoftware.rx.service;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -56,6 +57,24 @@ public class ToDoService {
 		}
 		LOGGER.info("Got the list - returning result...");
 		return items;
+	}
+
+	@GetMapping("/api/v1/todoitems/{id}")
+	public ToDoItem getToDoItemById(final @PathVariable("id") long id) throws ToDoServiceException {
+
+		List<ToDoItem> allItems = this.listAll();
+		List<ToDoItem> filteredById = allItems.stream().filter((item) -> {
+			return item.getId() == id;
+		}).collect(Collectors.toList());
+		LOGGER.info(String.format("Got item by id -> %s, total els->%d", id, filteredById.size()));
+		
+		ToDoItem  rs = null;
+		if(!filteredById.isEmpty()){
+			rs = filteredById.get(0);
+		}
+		LOGGER.info(String.format("rs->%s", rs));
+		
+		return rs;
 	}
 
 	@GetMapping("/api/v1/todoitems/status/{ItemStatus}")

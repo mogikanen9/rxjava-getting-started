@@ -27,7 +27,8 @@ public class DummyLoadRun {
 		boolean allWereLoaded = client.listAll().size() == myToDoItem.size();
 		long took = System.currentTimeMillis() - initTimePoint;
 		System.out.println(String.format("All my ToDo items were loaded -> %s, took %d ms.", allWereLoaded, took));
-
+		
+		System.exit(0);
 	}
 
 }

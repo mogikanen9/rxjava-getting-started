@@ -35,6 +35,8 @@ public class MultiThreadRun {
 		boolean allWereLoaded = client.listAll().size() == myToDoItems.size();
 		long took = System.currentTimeMillis() - initTimePoint;
 		System.out.println(String.format("All my ToDo items were loaded -> %s, took %d ms.", allWereLoaded, took));
+		
+		System.exit(0);
 	}
 }
 

@@ -16,7 +16,13 @@ public class DummyLoadRun {
 		long initTimePoint = System.currentTimeMillis();
 		List<ToDoItem> myToDoItem = new ArrayList<>();
 		for (int i = 0; i < 10; i++) {
+			long oneCallStartTime = System.currentTimeMillis();
+
 			Optional<ToDoItem> item = client.getById(i);
+
+			long oneCallTook = System.currentTimeMillis() - oneCallStartTime;
+			System.out.println(String.format("One call took ->%d ms.", oneCallTook));
+
 			if (item.isPresent()) {
 				myToDoItem.add(item.get());
 			} else {
@@ -27,7 +33,7 @@ public class DummyLoadRun {
 		boolean allWereLoaded = client.listAll().size() == myToDoItem.size();
 		long took = System.currentTimeMillis() - initTimePoint;
 		System.out.println(String.format("All my ToDo items were loaded -> %s, took %d ms.", allWereLoaded, took));
-		
+
 		System.exit(0);
 	}
 

@@ -8,7 +8,7 @@ import com.mogikanensoftware.rx.service.client.ToDoItem;
 
 import io.reactivex.Observable;
 
-public class RxDirectRun {	
+public class RxDirectRun {
 
 	public static void main(String[] args) {
 		final ClientService client = new ClientService(ClientSettings.SERVICE_URL);
@@ -25,14 +25,20 @@ public class RxDirectRun {
 
 		List<ToDoItem> myToDoItems = new ArrayList<>();
 		for (Observable<ToDoItem> observableItem : observableFutureList) {
+
+			long oneCallStartTime = System.currentTimeMillis();
+
 			observableItem.subscribe(emiter -> myToDoItems.add(emiter));
+
+			long oneCallTook = System.currentTimeMillis() - oneCallStartTime;
+			System.out.println(String.format("One subscribtion took ->%d ms.", oneCallTook));
+
 		}
 
 		boolean allWereLoaded = client.listAll().size() == myToDoItems.size();
 		long took = System.currentTimeMillis() - initTimePoint;
 		System.out.println(String.format("All my ToDo items were loaded -> %s, took %d ms.", allWereLoaded, took));
-		
+
 		System.exit(0);
 	}
 }
-

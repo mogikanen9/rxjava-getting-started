@@ -11,7 +11,7 @@ public class DummyLoadRun {
 
 	public static void main(String[] args) {
 
-		ClientService client = new ClientService("http://localhost:8080/api/v1/todoitems/");
+		ClientService client = new ClientService(ClientSettings.SERVICE_URL);
 
 		long initTimePoint = System.currentTimeMillis();
 		List<ToDoItem> myToDoItem = new ArrayList<>();

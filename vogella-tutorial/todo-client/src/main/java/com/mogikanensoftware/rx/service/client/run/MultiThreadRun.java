@@ -15,7 +15,7 @@ import com.mogikanensoftware.rx.service.client.ToDoItem;
 public class MultiThreadRun {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
-		final ClientService client = new ClientService("http://localhost:8080/api/v1/todoitems/");
+		final ClientService client = new ClientService(ClientSettings.SERVICE_URL);
 
 		long initTimePoint = System.currentTimeMillis();
 

@@ -32,3 +32,5 @@ vogella-tutorial/todo-client/target/**
 
 
 
+lynda-threads/target/classes/META-INF/maven/com.mogikanensoftware.rx/lynda-threads/pom.properties
+lynda-threads/target/classes/META-INF/maven/com.mogikanensoftware.rx/lynda-threads/pom.xml

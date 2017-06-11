@@ -14,6 +14,7 @@
 	<module>simple-composition</module>
 	<module>simple-filtering</module>
 	<module>vogella-tutorial</module>
+	<module>lynda-threads</module>
 </modules>
 
 	<properties>

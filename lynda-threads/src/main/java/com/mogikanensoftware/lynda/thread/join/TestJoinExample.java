@@ -2,10 +2,6 @@ package com.mogikanensoftware.lynda.thread.join;
 
 public class TestJoinExample {
 
-	/**
-	 * @param args
-	 *            the command line arguments
-	 */
 	public static void main(String[] args) {
 		TestJoinThread t1 = new TestJoinThread("t1");
 		TestJoinThread t2 = new TestJoinThread("t2");

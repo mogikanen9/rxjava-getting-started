@@ -1,19 +1,22 @@
 package com.mogikanensoftware.lynda.thread.sync;
 
-public class ThreadCounterNotSyncSample {
-	// define a class variable called counter
-	static int counter = 1;
+public class ThreadCounterObjectSyncSample {
 
 	public static void main(String[] args) {
 		// use lambda notation for the runnable method
 		Runnable r = () -> {
-			System.out.println("ID value: " + getID());
+			System.out.println("ID value: " + ID.getID());
 		};
 		Thread one = new Thread(r, "one");
 		one.start();
 		Thread two = new Thread(r, "two");
 		two.start();
 	}
+
+}
+
+class ID {
+	private static int counter; // initialized to 0 by default
 
 	public static synchronized int getID() {
 		return counter++;

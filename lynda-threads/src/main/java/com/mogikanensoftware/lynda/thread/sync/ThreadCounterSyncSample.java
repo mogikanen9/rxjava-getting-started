@@ -1,6 +1,6 @@
 package com.mogikanensoftware.lynda.thread.sync;
 
-public class ThreadCounterNotSyncSample {
+public class ThreadCounterSyncSample {
 	// define a class variable called counter
 	static int counter = 1;
 
@@ -15,7 +15,7 @@ public class ThreadCounterNotSyncSample {
 		two.start();
 	}
 
-	public static synchronized int getID() {
+	public static int getID() {
 		return counter++;
 	}
 }

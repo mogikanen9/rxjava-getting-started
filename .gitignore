@@ -25,3 +25,6 @@ simple-filtering/.settings/**
 simple-filtering/target/**
 simple-utility/.settings/**
 simple-utility/target/**
+**/target
+**/.settings
+*.pom

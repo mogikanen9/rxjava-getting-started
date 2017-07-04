@@ -3,18 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mogikanensoftware.rx</groupId>
-	<artifactId>rxjava-getting-started</artifactId>
+	<artifactId>vogella-tutorial</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>rxjava-getting-started</name>
+	<name>vogella-tutorial</name>
 	<url>http://maven.apache.org</url>
 
 <modules>
-	<module>simple-creation</module>
-	<module>simple-composition</module>
-	<module>simple-filtering</module>
-	<module>vogella-tutorial</module>
-	<module>lynda-threads</module>
+	<module>todo-client</module>
+	<module>todo-server</module>
 </modules>
 
 	<properties>
@@ -24,12 +21,14 @@
 	</properties>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/io.reactivex/rxjava -->
-		<dependency>
-			<groupId>io.reactivex</groupId>
-			<artifactId>rxjava</artifactId>
-			<version>1.2.9</version>
-		</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxjava -->
+<dependency>
+    <groupId>io.reactivex.rxjava2</groupId>
+    <artifactId>rxjava</artifactId>
+    <version>2.1.0</version>
+</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

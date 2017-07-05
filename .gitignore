@@ -17,21 +17,7 @@ hs_err_pid*
 *.prefs
 *.MF
 
-simple-creation/.settings/**
-simple-creation/target/**
-simple-composition/.settings/**
-simple-composition/target/**
-simple-filtering/.settings/**
-simple-filtering/target/**
+**/target
+**/.settings
 
-vogella-tutorial/.settings/**
-vogella-tutorial/target/**
-
-vogella-tutorial/todo-client/.settings/**
-vogella-tutorial/todo-client/target/**
-
-
-
-lynda-threads/target/classes/META-INF/maven/com.mogikanensoftware.rx/lynda-threads/pom.properties
-lynda-threads/target/classes/META-INF/maven/com.mogikanensoftware.rx/lynda-threads/pom.xml
 vogella-tutorial/todo-server/effective.pom
